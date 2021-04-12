@@ -1,0 +1,65 @@
+body{
+    background-color: #138496;
+}
+
+#container {
+    width: 400px;
+    margin: 10% auto 0;
+}
+
+form {
+    width: 100%;
+    padding: 30px;
+    background: white;
+    border: solid lightslategray 1px;
+    box-shadow: 0 0 20px 0 black;
+}
+
+#container h1 {
+    width : 40%;
+    margin : 0 20% ;
+    padding-bottom: 10px;
+}
+
+/* Full-width inputs */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+input[type=submit] {
+    background-color: #138496;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+input[type=submit]:hover {
+    background-color: white;
+    color: #138496;
+    border: 1px solid #138496;
+}
+
+#content {
+    width: 500px;
+    margin: 5% auto;
+}
+
+#content img {
+    max-width: 100%;
+}
+
+.content-message {
+    text-align: center;
+}
+
+.content-message p {
+    font-size: x-large;
+}
