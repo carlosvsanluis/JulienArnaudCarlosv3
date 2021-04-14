@@ -27,13 +27,13 @@ input[type=text], input[type=password] {
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
-    border: 1px solid #ccc;
+    border: 1px solid rgb(219, 23, 23);
     box-sizing: border-box;
 }
 
 /* Set a style for all buttons */
 input[type=submit] {
-    background-color: #138496;
+    background-color: #dad5d7;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
