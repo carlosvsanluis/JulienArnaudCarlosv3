@@ -16,8 +16,6 @@ if (isset($_POST['usermail']) && isset($_POST['password']))
 
     if($_POST['usermail']!=="" && $_POST['password']!==""){
 
-        //fuckyoujulien
-
         $pdoConnexionSecured = $pdo->prepare("SELECT * FROM administres WHERE `emailAdministre`=:name and `password`=:password");
         $pdoConnexionSecured->bindValue(':name', $_POST['usermail']);
         $pdoConnexionSecured->bindValue(':password', $_POST['password']);
