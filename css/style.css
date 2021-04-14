@@ -33,7 +33,7 @@ input[type=text], input[type=password] {
 
 /* Set a style for all buttons */
 input[type=submit] {
-    background-color: #138496;
+    background-color: #a1a1a1;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
