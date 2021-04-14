@@ -19,6 +19,7 @@ form {
     width : 40%;
     margin : 0 20% ;
     padding-bottom: 10px;
+    //tytydfjfgdfhj
 }
 
 /* Full-width inputs */
@@ -33,7 +34,11 @@ input[type=text], input[type=password] {
 
 /* Set a style for all buttons */
 input[type=submit] {
+<<<<<<< HEAD
     background-color: #dad5d7;
+=======
+    background-color: #a1a1a1;
+>>>>>>> 1037cbc333eee17b2ef559c7d642e0b335c88ece
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
