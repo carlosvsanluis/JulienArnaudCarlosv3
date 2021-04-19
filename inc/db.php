@@ -8,9 +8,9 @@ class DB {
 
     public function __construct()
     {
-        $dsn = 'mysql:host=localhost;dbname=mezia;charset=utf8';
-        $user = 'mezia';
-        $password = 'bonjour';
+        $dsn = 'mysql:host=localhost;dbname=mezialib;charset=utf8';
+        $user = 'root';
+        $password = '';
 
         try {
             $pdoConnexion = new PDO(
