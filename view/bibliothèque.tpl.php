@@ -11,11 +11,11 @@
         </div>
         <div class="row">
             <div class="col-12 col-md-8">
-                <a href="index.php?order=titreOuverage&amp;page=bibliothèque" class="btn btn-primary">Trier par nom</a>&nbsp;
-                <a href="index.php?order=idAuteur&amp;page=bibliothèque" class="btn btn-info">Trier par auteur</a>&nbsp;
+                <a href="privatespace.php?order=titreOuverage&amp;page=bibliothèque" class="btn btn-primary">Trier par nom</a>&nbsp;
+                <a href="privatespace.php?order=idAuteur&amp;page=bibliothèque" class="btn btn-info">Trier par auteur</a>&nbsp;
                 <!-- TODO #2 n'afficher ce bouton que s'il y a un tri -->
                 <?php if (isset($_GET['order'])) :?>
-                <a href="index.php" class="btn btn-dark">Annuler le tri</a><br> 
+                <a href="privatespace.php?&amp;page=bibliothèque" class="btn btn-dark">Annuler le tri</a><br> 
                 <?php endif ;?>             
                 <br>
                 <table class="table table-striped">
@@ -35,10 +35,9 @@
                     <tr>
                         <td><?= $book['idOuvrage'];?></td>
                         <td><?= $book['titreOuvrage'];?></td>
-                        <td><?= $auteurList[$book['idAuteur']];?></td>
+                        <td><?= $book['auteur'];?></td>
                         <td><?= $book['anneeeditionOuvrage'];?></td>
-                        <!--Ici je ne veux pas que ce soit l'id du genre qui s'affiche mais bien le name du genre, du coup je vais utiliser ma variable $genreList qui est un tableau qui stocke tout mes genres en lui transmettant l'id comme clé-->
-                        <td><?= $genreList[$book['idGenre']];?></td>
+                        <td><?= $book['genre'];?></td>
                     </tr>
                     <?php endforeach;?>
                 </tbody>

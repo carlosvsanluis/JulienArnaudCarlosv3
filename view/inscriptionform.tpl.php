@@ -17,9 +17,9 @@
             <h1>Inscription</h1>
             <label><strong>Nom d'utilisateur</strong></label>
             <input type="text" class="form-control" name="nom" required>
-            <label><strong>Pre Nom d'utilisateur</strong></label>
+            <label><strong>Prénom d'utilisateur</strong></label>
             <input type="text" class="form-control" name="prenom" required>
-            <label><strong>Telephone</strong></label>
+            <label><strong>Téléphone</strong></label>
             <input type="text" class="form-control" name="telephone" required>
             <label><strong>Adresse</strong></label>
             <input type="text" class="form-control" name="adresse" required>
