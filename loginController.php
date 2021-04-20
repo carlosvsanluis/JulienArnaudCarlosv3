@@ -27,8 +27,8 @@ if (isset($_POST['usermail']) && isset($_POST['password']))
         var_dump($result);
 
         if ($result != 0) {
-            $_SESSION['name'] = $result['name'];
-            var_dump($_SESSION['name']);
+            $_SESSION['name'] = $result['prenomAdministre'];
+    
             //die;
             header('Location: privatespace.php');
         } 
