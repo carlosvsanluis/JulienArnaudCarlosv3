@@ -122,7 +122,6 @@ input[type=submit]:hover {
     list-style-type: none;
     text-shadow: 0 0 4px #333;
     position: center;
-    //dffgdfd
 }
 
   .left__nav-item,  .footer_nav-item {
@@ -192,4 +191,27 @@ background-color: rgb(235, 214, 121);
   border-radius: 1em;
 
 }
+profil {
+    background: url(docs/<?php echo $selectedBg; ?>) no-repeat;
+    
+    }
+
+/*  testing this
+
+
+profil {
+background: url(docs/<?php echo $selectedBg; ?>) no-repeat;
+
+}
+
+profile {
+
+
+
+
+}
+
+
+
+*/
 

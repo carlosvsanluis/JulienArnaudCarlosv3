@@ -2,7 +2,6 @@
   <body style="background: white">
       <div id="content"> 
         <!-- je veux tester si mon utilisateur est bien connecté et que donc la super global $_SESSION existe et que  la clé name existe aussi et est bien renseignée -->
-        <?php var_dump($_SESSION);?>
         <?php if (empty($_SESSION)) : ?>
         <h1>Vous n'êtes pas autorisé à voir cette page</h1>        
         <?php else :?>
@@ -10,7 +9,6 @@
             <h1>Bonjour <?=$_SESSION['name'];?></h1>
             <p> bienvenue, vous êtes connecté </p>
         </div>
-        //julien
         <img src="docs/Mezia_LIb.png">
         <a href="deconnexionController.php" class="btn btn-dark offset-md-4 mt-3"> Se déconnecter </a>
         <?php endif;

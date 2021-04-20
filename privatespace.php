@@ -1,6 +1,5 @@
 <?php session_start();
 
-
 $currentPage = 'prive';   
 
 
@@ -9,11 +8,42 @@ if (isset ($_GET['page'])){
     // je veux récupérer la valeur stockée dans la clé page de $_GET. Cette valeur va me permettre d'appeler la bonne template.
     $currentPage = $_GET['page'];
 }
-
-
+require __DIR__.'/inc/db.php'; // Pour __DIR__ => http://php.net/manual/fr/language.constants.predefined.php
+// Rappel : la variable $pdo est disponible dans ce fichier
+//          car elle a été créée par le fichier inclus ci-dessus
+$dbConnexion = new DB; 
+$pdo = $dbConnexion->getPdo();
+$sql = 'SELECT * FROM `ouvrages` 
+';
+$pdoStatement = $pdo->query($sql);
+$bookList = $pdoStatement->fetchAll(PDO::FETCH_ASSOC);
+// Si un tri a été demandé, on réécrit la requête
+if (!empty($_GET['order'])) {
+    // Récupération du tri choisi
+    $order = trim($_GET['order']);
+    if ($order == 'name') {
+        // TODO #2 écrire la requête avec un tri par nom croissant
+        $sql = 'SELECT * from `ouvrages`
+        ORDER BY `name` ASC
+        ';
+    }
+    else if ($order == 'auteur') {
+        // TODO #2 écrire la requête avec un tri par autheur croissant
+        $sql = 'SELECT * from `ouvrages`
+        ORDER BY `auteur` ASC 
+        ';
+    }
+}
 require __DIR__."/inc/header.tpl.php";
 
+
+// Inclusion du fichier s'occupant d'afficher le code HTML
 require __DIR__.'/view/'.$currentPage.".tpl.php";
 
-require __DIR__."/inc/footer.tpl.php"
-?>
+require __DIR__."/inc/footer.tpl.php";
+
+
+
+
+
+
