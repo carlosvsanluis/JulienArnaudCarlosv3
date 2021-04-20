@@ -2,7 +2,6 @@
   <body style="background: white">
       <div id="content"> 
         <!-- je veux tester si mon utilisateur est bien connecté et que donc la super global $_SESSION existe et que  la clé name existe aussi et est bien renseignée -->
-        <?php var_dump($_SESSION);?>
         <?php if (empty($_SESSION)) : ?>
         <h1>Vous n'êtes pas autorisé à voir cette page</h1>        
         <?php else :?>
