@@ -23,6 +23,7 @@
             <li <?php if ($currentPage == 'mesEmprunts') {echo ' id="en-cours"';} ?>class="left__nav-item left__nav-link:hover"><a href="privatespace.php?page=mesEmprunts" class="left__nav-link">Mes emprunts</a></li>
             <li <?php if ($currentPage == 'profil') {echo ' id="en-cours"';} ?>class="left__nav-item left__nav-link:hover"><a href="privatespace.php?page=prive" class="left__nav-link">Profil</a></li>
             <li <?php if ($currentPage == 'deconnexion') {echo ' id="en-cours"';} ?>class="left__nav-item left__nav-link:hover"><a href="privatespace.php?page=deconnexion" class="left__nav-link">Déconnexion</a></li>
+            
           </ul>
         </nav>
       </header>

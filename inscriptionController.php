@@ -14,6 +14,8 @@ $pdo = $dbConnexion->getPdo();
     $npassword = $_POST['npassword'];
     $password2 = $_POST['password2'];
     
+   
+    if($_POST['npassword']== $_POST['password2']){
 
     $insertQuery = "INSERT into `administres` (idAdministre, nomAdministre, prenomAdministre, 
     telephoneAdministre, emailADministre, adresseAdministre, password)
@@ -21,6 +23,13 @@ $pdo = $dbConnexion->getPdo();
     '{$npassword}');
     ";
     $pdoStatement = $pdo->exec($insertQuery);
+
+    header('Location: subscribed.php');
+    }
+    
+    else { echo "<h2>Erreur: les mots de passe que vous avez saisis ne correspondent pas. Veuillez réessayer</h2>" ;
+    
+    }
 
   
   
