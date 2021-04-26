@@ -1,6 +1,10 @@
-<?php session_start();
 
-$currentPage = 'prive';   
+<?php session_start();
+ if (empty($_SESSION)) : ?>
+    <h1>Vous n'êtes pas autorisé à voir cette page</h1>  
+    <a href="index.php" class="btn btn-info offset-md-80">Me connecter</a>      
+    <?php else :?>
+        <?php $currentPage = 'prive';
 
 
 // Je vérifie que ma super globale contient une valeur et que cette valeur est stockée dans une clé "page"
@@ -43,7 +47,8 @@ require __DIR__.'/view/'.$currentPage.".tpl.php";
 
 require __DIR__."/inc/footer.tpl.php";
 
-
+?>
+<?php endif; ?> 
 
 
 

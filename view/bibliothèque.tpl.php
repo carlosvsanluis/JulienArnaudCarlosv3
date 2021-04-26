@@ -10,7 +10,7 @@
             <h1 class="display-4">MEZIALIB</h1>
         </div>
         <div class="row">
-            <div class="col-12 col-md-8">
+            
                 <a href="privatespace.php?order=titre&amp;page=bibliothèque" class="btn btn-primary">Trier par nom</a>&nbsp;
                 <a href="privatespace.php?order=auteur&amp;page=bibliothèque" class="btn btn-info">Trier par auteur</a>&nbsp;
                 <!-- TODO #2 n'afficher ce bouton que s'il y a un tri -->
@@ -43,7 +43,7 @@
                 </tbody>
                 </table>
             </div>
-            <div class="col-12 col-md-4">
+           
             </div>
         </div>
     </main>
