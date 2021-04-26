@@ -1,16 +1,12 @@
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    
 
     <title>Ma bibliothèque d'amour</title>
   </head>
   <body>
     <main class="container">
-        <div class="jumbotron">
             <h1 class="display-4">MEZIALIB</h1>
-        </div>
-        <div class="row">
-            
                 <a href="privatespace.php?order=titre&amp;page=bibliothèque" class="btn btn-primary">Trier par nom</a>&nbsp;
                 <a href="privatespace.php?order=auteur&amp;page=bibliothèque" class="btn btn-info">Trier par auteur</a>&nbsp;
                 <!-- TODO #2 n'afficher ce bouton que s'il y a un tri -->
@@ -43,8 +39,7 @@
                 </tbody>
                 </table>
             </div>
-           
-            </div>
+            
         </div>
     </main>
 

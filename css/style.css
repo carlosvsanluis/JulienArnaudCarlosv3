@@ -5,23 +5,28 @@
     font-size: 200%;
     list-style-type: none;
     text-shadow: 0 0 4px #333;
-    position: center;
+    display: flex;
+    justify-content: center;
+    height: 100px;
     
+
 }
 .nav-link {
     color: white;
     padding: 0.5em 0.5em;
     margin: 0;
     font-weight: 700;
+    height: 100px;
     
 } 
 .nav-link:hover {
     color: inherit;
     text-decoration: none;
-    
     border-radius: 1em;
     list-style-type: none;
     text-shadow: 0 0 4px #333;
+    height: 100px;
+    
 }
 body{
     background-color: white; 
@@ -29,12 +34,10 @@ body{
 
     position: relative;
 }
+
+
 #container {
-    width: 400px;
-    margin: 10% auto 0;
-}
-#container h1 {
-    width : 40%;
+    width : 100%;
     margin : 0 20% ;
     padding-bottom: 10px;
 }
@@ -173,9 +176,11 @@ html{
     justify-content: center;
 
 }
-.containerHome{
-    padding-top: 5%;
+
+
+header{
+    height: 100px;
 }
-
-
-
+.display-4{
+    background-color: rgb(144, 197, 202);
+}

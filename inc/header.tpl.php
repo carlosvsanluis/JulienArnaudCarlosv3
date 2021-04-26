@@ -16,8 +16,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Espace privé</title>
 </head>
-
-      <header class="left">
+      <header class="headerStick">
         <nav class="nav">
           <ul>
             <li <?php if ($currentPage == 'acceuilCO') {echo ' id="en-cours"';} ?>class="nav-item nav-link:hover"><a  href="privatespace.php?page=acceuilCO" class="nav-link">Acceuil</a></li>
@@ -26,7 +25,6 @@
             <li <?php if ($currentPage == 'mesEmprunts') {echo ' id="en-cours"';} ?>class="nav-item nav-link:hover"><a href="privatespace.php?page=mesEmprunts" class="nav-link">Mes emprunts</a></li>
             <li <?php if ($currentPage == 'profil') {echo ' id="en-cours"';} ?>class="nav-item nav-link:hover"><a href="privatespace.php?page=profil" class="nav-link">Profil</a></li>
             <li <?php if ($currentPage == 'deconnexion') {echo ' id="en-cours"';} ?>class="nav-item nav-link:hover"><a href="privatespace.php?page=deconnexion" class="nav-link">Déconnexion</a></li>
-            
           </ul>
         </nav>
       </header>
