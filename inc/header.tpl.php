@@ -18,14 +18,14 @@
 </head>
 
       <header class="left">
-        <nav class="left__nav">
+        <nav class="nav">
           <ul>
-            <li <?php if ($currentPage == 'acceuilCO') {echo ' id="en-cours"';} ?>class="left__nav-item left__nav-link:hover"><a  href="privatespace.php?page=acceuilCO" class="left__nav-link">Acceuil</a></li>
-            <li <?php if ($currentPage == 'bibliothèque') {echo ' id="en-cours"';} ?>class="left__nav-item left__nav-link:hover"><a href="privatespace.php?page=bibliothèque" class="left__nav-link">Bibliothèque</a></li>
-            <li <?php if ($currentPage == 'mesLivres') {echo ' id="en-cours"';} ?>class="left__nav-item left__nav-link:hover"><a href="privatespace.php?page=mesLivres" class="left__nav-link">Mes Livres</a></li>
-            <li <?php if ($currentPage == 'mesEmprunts') {echo ' id="en-cours"';} ?>class="left__nav-item left__nav-link:hover"><a href="privatespace.php?page=mesEmprunts" class="left__nav-link">Mes emprunts</a></li>
-            <li <?php if ($currentPage == 'profil') {echo ' id="en-cours"';} ?>class="left__nav-item left__nav-link:hover"><a href="privatespace.php?page=prive" class="left__nav-link">Profil</a></li>
-            <li <?php if ($currentPage == 'deconnexion') {echo ' id="en-cours"';} ?>class="left__nav-item left__nav-link:hover"><a href="privatespace.php?page=deconnexion" class="left__nav-link">Déconnexion</a></li>
+            <li <?php if ($currentPage == 'acceuilCO') {echo ' id="en-cours"';} ?>class="nav-item nav-link:hover"><a  href="privatespace.php?page=acceuilCO" class="nav-link">Acceuil</a></li>
+            <li <?php if ($currentPage == 'bibliothèque') {echo ' id="en-cours"';} ?>class="nav-item nav-link:hover"><a href="privatespace.php?page=bibliothèque" class="nav-link">Bibliothèque</a></li>
+            <li <?php if ($currentPage == 'mesLivres') {echo ' id="en-cours"';} ?>class="nav-item nav-link:hover"><a href="privatespace.php?page=mesLivres" class="nav-link">Mes Livres</a></li>
+            <li <?php if ($currentPage == 'mesEmprunts') {echo ' id="en-cours"';} ?>class="nav-item nav-link:hover"><a href="privatespace.php?page=mesEmprunts" class="nav-link">Mes emprunts</a></li>
+            <li <?php if ($currentPage == 'profil') {echo ' id="en-cours"';} ?>class="nav-item nav-link:hover"><a href="privatespace.php?page=profil" class="nav-link">Profil</a></li>
+            <li <?php if ($currentPage == 'deconnexion') {echo ' id="en-cours"';} ?>class="nav-item nav-link:hover"><a href="privatespace.php?page=deconnexion" class="nav-link">Déconnexion</a></li>
             
           </ul>
         </nav>

@@ -1,12 +1,43 @@
-body{
-    background-color: #138496;
+.nav{
+    background-color: #778899;
+    width: 100%;
+    padding: 1%;
+    font-size: 200%;
+    list-style-type: none;
+    text-shadow: 0 0 4px #333;
+    position: center;
+    
 }
+.nav-link {
+    color: white;
+    padding: 0.5em 0.5em;
+    margin: 0;
+    font-weight: 700;
+    
+} 
+.nav-link:hover {
+    color: inherit;
+    text-decoration: none;
+    
+    border-radius: 1em;
+    list-style-type: none;
+    text-shadow: 0 0 4px #333;
+}
+body{
+    background-color: white; 
+    min-height: 100%;
 
+    position: relative;
+}
 #container {
     width: 400px;
     margin: 10% auto 0;
 }
-
+#container h1 {
+    width : 40%;
+    margin : 0 20% ;
+    padding-bottom: 10px;
+}
 form {
     width: 100%;
     padding: 30px;
@@ -15,29 +46,16 @@ form {
     box-shadow: 0 0 20px 0 black;
 }
 
-#container h1 {
-    width : 40%;
-    margin : 0 20% ;
-    padding-bottom: 10px;
-
-  
-}
-
-/* Full-width inputs */
 input[type=text], input[type=password] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
-    border: 1px solid rgb(219, 23, 23);
+    border: 1px solid rgb(34, 25, 73);
     box-sizing: border-box;
 }
-
-/* Set a style for all buttons */
 input[type=submit] {
-    background-color: #dad5d7;
-    background-color: #a1a1a1;
-    color: white;
+    background-color: red;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
@@ -49,59 +67,29 @@ input[type=submit]:hover {
     color: #138496;
     border: 1px solid #138496;
 }
-
 #content {
     width: 500px;
     margin: 5% auto;
 }
-
 #content img {
     max-width: 100%;
 }
-
-.content-message {
+.presentation,  h1, h2, p, .left__nav, .content-message {
     text-align: center;
 }
-
 .content-message p {
     font-size: x-large;
 }
 
-body{
-    background: #909b8d;
-}
+
 #container{
     width:400px;
     margin:0 auto;
     margin-top:10%;
 }
-/* Bordered form /
-form {
-    width:100%;
-    padding: 30px;
-    border: 1px solid #f1f1f1;
-    background: #fff;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-}
-#container h1{
-    width: 38%;
-    margin: 0 auto;
-    padding-bottom: 10px;
-}
 
-/ Full-width inputs /
-input[type=text], input[type=password] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-}
-
-/ Set a style for all buttons */
 input[type=submit] {
-    background-color: #acb1ac;
+    background-color: #120963;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -114,38 +102,12 @@ input[type=submit]:hover {
     color: #8c978c;
     border: 1px solid #818d82;
 }
-.left__nav{
-    background-color: #778899;
-    width: 100%;
-    padding: 1%;
-    font-size: 200%;
-    list-style-type: none;
-    text-shadow: 0 0 4px #333;
-    position: center;
-}
 
-  .left__nav-item,  .footer_nav-item {
+
+.nav-item,  .footer_nav-item {
     display: inline-block;
-  }
-  
-  .left__nav-link {
-    color: white;
-    padding: 0.5em 1em;
-    margin: 0;
-    font-weight: 700;
-  }
-
-  
-  .left__nav-link:hover {
-    color: inherit;
-    text-decoration: none;
-    background-color: rgba(0, 0, 0, 0.4);
-    border-radius: 1em;
-    list-style-type: none;
-    text-shadow: 0 0 4px #333;
-  }
-
-  .footer_nav{
+}
+.footer_nav{
     background-color: #778899;
     width: 100%;
     padding: 1%;
@@ -155,63 +117,65 @@ input[type=submit]:hover {
 
 .footer_nav-item-link{
     color: white;
-    padding: 0.5em 1em;
+    padding: 0.5em 0.5em;
     margin: 0;
     font-weight: 700;
-  }
-  .footer_nav-item-link:hover{
+}
+.footer_nav-item-link:hover{
     color: inherit;
     text-decoration: none;
-    background-color: rgba(0, 0, 0, 0.4);
-    border-radius: 6px;
-  }
-  body {
-    min-height: 100%;
-    margin: 0;
-    padding: 0;
-      position: relative;
-background-color: rgb(235, 214, 121);
-    
-    }
-  footer {
-      width: 100%;
+  
+    border-radius: 1em;
+}
+
+footer {
+    width: 100%;
     position: absolute; bottom: 0;
     text-align: center;
-    position: center;}
-    html{
-        height: 100%;
-    }
-    .presentation,  h1, h2, p, .left__nav{
-        text-align: center;
-    }
+    position: center;
+}
 
+html{
+    height: 100%;
+}
 #en-cours a {
-	background-color: #2F4F4F;
-  color: #fff;
-  border-radius: 1em;
-
-}
-profil {
-    background: url(docs/<?php echo $selectedBg; ?>) no-repeat;
+    color: inherit;
     
-    }
+    border-radius: 1em;
+}
+.btn1, .btn2{
 
-/*  testing this
-
-
-profil {
-background: url(docs/<?php echo $selectedBg; ?>) no-repeat;
-
+    
+    background-color: #778899;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 1%;
+    border-radius: 1em;
+    font-size: 200%;
+}
+.btn1:hover, .btn2:hover{
+    
+    text-decoration: none;
+    background-color: inherit;
+    
 }
 
-profile {
+.container2{
+    display: flex;
+    justify-content: center;
 
-
-
-
+}
+.containerHome{
+    padding-top: 5%;
 }
 
 
-
-*/
 

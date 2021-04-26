@@ -4,7 +4,7 @@
     <h1>Vous n'êtes pas autorisé à voir cette page</h1>  
     <a href="index.php" class="btn btn-info offset-md-80">Me connecter</a>      
     <?php else :?>
-        <?php $currentPage = 'prive';
+        <?php $currentPage = 'profil';
 
 
 // Je vérifie que ma super globale contient une valeur et que cette valeur est stockée dans une clé "page"
