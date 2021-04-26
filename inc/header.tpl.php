@@ -1,3 +1,6 @@
+<?php if (empty($_SESSION)) : ?>
+        <h1>Vous n'êtes pas autorisé à voir cette page</h1>        
+        <?php else :?>
 
 <!DOCTYPE html>
 <html>
@@ -27,3 +30,5 @@
           </ul>
         </nav>
       </header>
+
+      <?php endif; ?>

@@ -15,16 +15,14 @@ $dbConnexion = new DB;
 $pdo = $dbConnexion->getPdo();
 $sql = 'SELECT * FROM `ouvrages` 
 ';
-$pdoStatement = $pdo->query($sql);
-$bookList = $pdoStatement->fetchAll(PDO::FETCH_ASSOC);
 // Si un tri a été demandé, on réécrit la requête
 if (!empty($_GET['order'])) {
     // Récupération du tri choisi
     $order = trim($_GET['order']);
-    if ($order == 'name') {
-        // TODO #2 écrire la requête avec un tri par nom croissant
+    if ($order == 'titre') {
+        // TODO #2 écrire la requête avec un tri par titre croissant
         $sql = 'SELECT * from `ouvrages`
-        ORDER BY `name` ASC
+        ORDER BY `titreOuvrage` ASC
         ';
     }
     else if ($order == 'auteur') {
@@ -34,6 +32,9 @@ if (!empty($_GET['order'])) {
         ';
     }
 }
+$pdoStatement = $pdo->query($sql);
+$bookList = $pdoStatement->fetchAll(PDO::FETCH_ASSOC);
+
 require __DIR__."/inc/header.tpl.php";
 
 

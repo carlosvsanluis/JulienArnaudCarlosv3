@@ -11,8 +11,8 @@
         </div>
         <div class="row">
             <div class="col-12 col-md-8">
-                <a href="privatespace.php?order=titreOuverage&amp;page=bibliothèque" class="btn btn-primary">Trier par nom</a>&nbsp;
-                <a href="privatespace.php?order=idAuteur&amp;page=bibliothèque" class="btn btn-info">Trier par auteur</a>&nbsp;
+                <a href="privatespace.php?order=titre&amp;page=bibliothèque" class="btn btn-primary">Trier par nom</a>&nbsp;
+                <a href="privatespace.php?order=auteur&amp;page=bibliothèque" class="btn btn-info">Trier par auteur</a>&nbsp;
                 <!-- TODO #2 n'afficher ce bouton que s'il y a un tri -->
                 <?php if (isset($_GET['order'])) :?>
                 <a href="privatespace.php?&amp;page=bibliothèque" class="btn btn-dark">Annuler le tri</a><br> 
