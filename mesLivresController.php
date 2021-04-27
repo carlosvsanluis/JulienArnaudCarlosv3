@@ -6,35 +6,27 @@
     <?php else :?>
         <?php $currentPage = 'mesLivres';
 
-
-// Je vérifie que ma super globale contient une valeur et que cette valeur est stockée dans une clé "page"
-if (isset ($_GET['page'])){
-    // je veux récupérer la valeur stockée dans la clé page de $_GET. Cette valeur va me permettre d'appeler la bonne template.
-    $currentPage = $_GET['page'];
-}
-require __DIR__.'/inc/db.php'; // Pour __DIR__ => http://php.net/manual/fr/language.constants.predefined.php
-// Rappel : la variable $pdo est disponible dans ce fichier
-//          car elle a été créée par le fichier inclus ci-dessus
+require __DIR__.'/inc/db.php'; 
 
 $dbConnexion = new DB; 
 $pdo = $dbConnexion->getPdo();
 $owner = $_SESSION['owner'];
 $sql = 'SELECT * FROM `ouvrages` where `idAdministre` = ' .$owner;
 // Si un tri a été demandé, on réécrit la requête
-if (!empty($_GET['order'])) {
+if (!empty($_GET['ordermeslivres'])) {
     // Récupération du tri choisi
-    $order = trim($_GET['order']);
-    if ($order == 'titre') {
+    $ordermeslivres = trim($_GET['ordermeslivres']);
+    if ($ordermeslivres == 'titre') {
         // TODO #2 écrire la requête avec un tri par titre croissant
-        $sql = 'SELECT * from `ouvrages`
+        $sql = 'SELECT * from `ouvrages` WHERE  `idAdministre` = ' .$owner .' 
         ORDER BY `titreOuvrage` ASC
-        ';
+        ;';
     }
-    else if ($order == 'auteur') {
+    else if ($ordermeslivres == 'auteur') {
         // TODO #2 écrire la requête avec un tri par autheur croissant
-        $sql = 'SELECT * from `ouvrages`
+        $sql = 'SELECT * from `ouvrages` WHERE  `idAdministre` = ' .$owner .'
         ORDER BY `auteur` ASC 
-        ';
+        ;';
     }
 }
 
@@ -47,7 +39,7 @@ require __DIR__."/inc/header.tpl.php";
 
 
 // Inclusion du fichier s'occupant d'afficher le code HTML
-require __DIR__.'/view/'.$currentPage.".tpl.php";
+require __DIR__."/view/mesLivres.tpl.php";
 
 require __DIR__."/inc/footer.tpl.php";
 

@@ -26,6 +26,7 @@
                         <th scope="col">Auteur</th>
                         <th scope="col">Date de publication</th>
                         <th scope="col">Genre</th>
+                        <th scope="col">Disponibilite</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -38,6 +39,7 @@
                         <td><?= $book['auteur'];?></td>
                         <td><?= $book['anneeeditionOuvrage'];?></td>
                         <td><?= $book['genre'];?></td>
+                        <td><?= $book['disponible'];?></td>
                     </tr>
                     <?php endforeach;?>
                 </tbody>

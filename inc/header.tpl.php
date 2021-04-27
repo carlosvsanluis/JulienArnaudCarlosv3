@@ -22,7 +22,7 @@
           <ul>
             <li <?php if ($currentPage == 'acceuilCO') {echo ' id="en-cours"';} ?>class="nav-item nav-link:hover"><a  href="privatespace.php?page=acceuilCO" class="nav-link">Acceuil</a></li>
             <li <?php if ($currentPage == 'bibliothèque') {echo ' id="en-cours"';} ?>class="nav-item nav-link:hover"><a href="privatespace.php?page=bibliothèque" class="nav-link">Bibliothèque</a></li>
-            <li <?php if ($currentPage == 'mesLivres') {echo ' id="en-cours"';} ?>class="nav-item nav-link:hover"><a href="privatespace.php?page=mesLivres" class="nav-link">Mes Livres</a></li>
+            <li <?php if ($currentPage == 'mesLivres') {echo ' id="en-cours"';} ?>class="nav-item nav-link:hover"><a href="mesLivresController.php?page=mesLivres" class="nav-link">Mes Livres</a></li>
             <li <?php if ($currentPage == 'mesEmprunts') {echo ' id="en-cours"';} ?>class="nav-item nav-link:hover"><a href="privatespace.php?page=mesEmprunts" class="nav-link">Mes emprunts</a></li>
             <li <?php if ($currentPage == 'profil') {echo ' id="en-cours"';} ?>class="nav-item nav-link:hover"><a href="privatespace.php?page=profil" class="nav-link">Profil</a></li>
             <li <?php if ($currentPage == 'deconnexion') {echo ' id="en-cours"';} ?>class="nav-item nav-link:hover"><a href="privatespace.php?page=deconnexion" class="nav-link">Déconnexion</a></li>
