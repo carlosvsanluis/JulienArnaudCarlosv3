@@ -14,12 +14,12 @@
 
                 
             
-                <a href="mesLivresController.php?order=titre&amp;page=mesLivres" class="btn btn-primary">Trier par nom</a>&nbsp;
-                <a href="mesLivresController.php?order=auteur&amp;page=mesLivres" class="btn btn-info">Trier par auteur</a>&nbsp;
+                <a href="mesLivresController.php?ordermeslivres=titre&amp;page=mesLivres" class="btn btn-primary">Trier par nom</a>&nbsp;
+                <a href="mesLivresController.php?ordermeslivres=auteur&amp;page=mesLivres" class="btn btn-info">Trier par auteur</a>&nbsp;
                 <!-- TODO #2 n'afficher ce bouton que s'il y a un tri -->
-                <?php if (isset($_GET['order'])) :?>
+                <?php if (isset($_GET['ordermeslivres'])) :?>
                 <a href="mesLivresController.php?&amp;page=mesLivres" class="btn btn-dark">Annuler le tri</a><br> 
-                <?php endif ;?>             
+                <?php endif ;?>            
                 <br>
                 <table class="table table-striped">
                 <thead>
