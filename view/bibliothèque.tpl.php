@@ -1,8 +1,4 @@
 
-
-    
-
-    <title>Ma bibliothèque d'amour</title>
   </head>
   <body>
     <main class="container">
