@@ -26,6 +26,9 @@ if (isset($_POST['usermail']) && isset($_POST['password']))
         print_r($result);
         var_dump($result);
 
+        $_SESSION['owner'] = $result['idAdministre'];
+        $_SESSION['dispo'] = $result['disponible'];
+
         if ($result != 0) {
             $_SESSION['name'] = $result['prenomAdministre'];
     
