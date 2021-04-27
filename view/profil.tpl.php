@@ -1,7 +1,7 @@
 
   <body>
       
-     
+   
   <?php
 
 //Random Background 
@@ -19,8 +19,7 @@
         }
       -->
     </style>
-
-
+    
   
       <div id="content"> 
       
