@@ -4,7 +4,7 @@
     <h1>Vous n'êtes pas autorisé à voir cette page</h1>  
     <a href="index.php" class="btn btn-info offset-md-80">Me connecter</a>      
     <?php else :?>
-        <?php $currentPage = 'mesLivres';
+        <?php $currentPage = 'mesEmprunts';
 
 require __DIR__.'/inc/db.php'; 
 
@@ -39,7 +39,7 @@ require __DIR__."/inc/header.tpl.php";
 
 
 // Inclusion du fichier s'occupant d'afficher le code HTML
-require __DIR__."/view/mesLivres.tpl.php";
+require __DIR__."/view/mesEmprunts.tpl.php";
 
 require __DIR__."/inc/footer.tpl.php";
 

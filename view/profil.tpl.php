@@ -1,7 +1,8 @@
 
   <body>
       
-   
+      <div id="content"> 
+        
   <?php
 
 //Random Background 
@@ -20,9 +21,6 @@
       -->
     </style>
     
-  
-      <div id="content"> 
-      
         <div class="content-message">
             <h1>Bonjour <?=$_SESSION['name'];?></h1>
             <p> bienvenue, vous êtes connecté </p>
