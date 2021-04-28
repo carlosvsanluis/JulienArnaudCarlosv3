@@ -1,0 +1,12 @@
+if $currentpage = 'mesLivres' {
+
+    $dbConnexion = new DB; 
+    $pdo = $dbConnexion->getPdo();
+    $owner = <?=$_SESSION['owner'];?>
+    $sql = 'SELECT * FROM `ouvrages` where `idAdministre` $owner
+  
+
+';
+
+
+}

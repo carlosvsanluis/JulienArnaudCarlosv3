@@ -36,6 +36,9 @@ if (!empty($_GET['order'])) {
         ';
     }
 }
+
+
+
 $pdoStatement = $pdo->query($sql);
 $bookList = $pdoStatement->fetchAll(PDO::FETCH_ASSOC);
 
