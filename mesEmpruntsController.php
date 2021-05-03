@@ -7,74 +7,12 @@
         <?php $currentPage = 'mesEmprunts';
 
 require __DIR__.'/inc/db.php'; 
-require __DIR__.'/view/mesEmprunts.tpl.php'; 
-
-
-
+require __DIR__."/inc/header.tpl.php";
 
 
 $dbConnexion = new DB; 
 $pdo = $dbConnexion->getPdo();
 $owner = $_SESSION['owner']; 
-
-//$_SESSION['name'] = $result['prenomAdministre'];
-
-print_r($_POST);
-
-
-if($_POST['idOuvrage']!=="" && $_POST['titre']!==""){
-
-    $pdoConnexionSecured2 = $pdo->prepare("SELECT * FROM ouvrages WHERE `idOuvrage`=:idOuvrage and `idAdministre`=:$owner");
-    $pdoConnexionSecured2->bindValue(':idOuvrage', $_POST['idOuvrage']);
-    $pdoConnexionSecured2->bindValue(':titreOuvrage', $_POST['titre']);
-    $pdoConnexionSecured2->bindValue(':auteur', $_POST['auteur']);
-
-    $pdoConnexionSecured2->execute();
-    
-    $pdoStatement = $pdo->query($sql);
-    $bookList = $pdoStatement->fetchAll(PDO::FETCH_ASSOC);
-
-    $result = $pdoConnexionSecured2->fetch(PDO::FETCH_ASSOC);
-    
-
-
-        if ($result[':disponible'] == "OUI" ) {
-
-            if ($_POST['idOuvrage']== $book['idOuvrage']){
-
-                $titre = $_POST['titre'];
-                $auteur = $_POST['auteur'];
-                $idOuvrage = $_POST['idOuvrage'];
-            
-                $insertQuery = "INSERT into `emprunter` (idAdministre, idOuvrages, titreOuvrage, 
-                auteur)
-                VALUES ({$owner}, '{$idOuvrage}', '{$titre}', '{$auteur}');
-                ";
-        
-                $pdoStatement = $pdo->exec($insertQuery);
-        
-                header('Location: borrowed.php');
-        
-                }
-                
-                else { echo "<h2>Erreur: ID Ouvrages que vous avez saisis ne correspondent pas. Veuillez réessayer</h2>" ;
-                
-                }
-        
-           
-
-            //die;
-            header('Location: borrowed.php');
-        } 
-        else {
-            echo('Le Livre est ne pas disponible');
-        }   
-} 
-    else {
-        // fonction header me permet de faire une redirection cf la documentation : https://www.php.net/manual/fr/function.header.php
-        echo('');
-    }
-
 
 
 $sql = 'SELECT * FROM `emprunter` where `idAdministre` = ' .$owner;
@@ -101,12 +39,11 @@ if (!empty($_GET['ordermesemprunts'])) {
 $pdoStatement = $pdo->query($sql);
 $bookList = $pdoStatement->fetchAll(PDO::FETCH_ASSOC);
 
-require __DIR__."/inc/header.tpl.php";
+require __DIR__.'/view/mesEmprunts.tpl.php'; 
+
 
 
 // Inclusion du fichier s'occupant d'afficher le code HTML
-require __DIR__."/view/mesEmprunts.tpl.php";
-
 require __DIR__."/inc/footer.tpl.php";
 
 ?>
