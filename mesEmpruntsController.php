@@ -7,6 +7,7 @@
         <?php $currentPage = 'mesEmprunts';
 
 require __DIR__.'/inc/db.php'; 
+require __DIR__.'/view/mesEmprunts.tpl.php'; 
 
 
 
@@ -15,7 +16,8 @@ require __DIR__.'/inc/db.php';
 $dbConnexion = new DB; 
 $pdo = $dbConnexion->getPdo();
 $owner = $_SESSION['owner']; 
-$_SESSION['name'] = $result['prenomAdministre'];
+
+//$_SESSION['name'] = $result['prenomAdministre'];
 
 print_r($_POST);
 
@@ -27,18 +29,16 @@ if($_POST['idOuvrage']!=="" && $_POST['titre']!==""){
     $pdoConnexionSecured2->bindValue(':titreOuvrage', $_POST['titre']);
     $pdoConnexionSecured2->bindValue(':auteur', $_POST['auteur']);
 
-
     $pdoConnexionSecured2->execute();
+    
+    $pdoStatement = $pdo->query($sql);
+    $bookList = $pdoStatement->fetchAll(PDO::FETCH_ASSOC);
 
     $result = $pdoConnexionSecured2->fetch(PDO::FETCH_ASSOC);
-
-   
-
-    print_r($result);
-    var_dump($result);
+    
 
 
-        if ($result[':diponible'] == "OUI" ) {
+        if ($result[':disponible'] == "OUI" ) {
 
             if ($_POST['idOuvrage']== $book['idOuvrage']){
 
