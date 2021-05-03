@@ -7,38 +7,37 @@
   </head>
 
   <body>
-    <main class="container">
+  <main class="container">
         <div class="jumbotron">
             <h1 class="display-4">Les Emprunts du <?=$_SESSION['name'];?> <?=$_SESSION['owner'];?> </h1>
         </div>
+        <div id="container">
+        <form action="mesEmpruntsController.php" method="POST">
+                <h1>Inscription</h1>
+                <label><strong>idOuvrage</strong></label>
+                <input type="text" class="form-control" name="idOuvrage" required>
+                <label><strong>Titre d'Ouvrage</strong></label>
+                <input type="text" class="form-control" name="titre" required>
+                <label><strong>Auteur d'Ouvrage</strong></label>
+                <input type="text" class="form-control" name="auteur" required>
+                <input type="submit" value="Emprunt">
+                <a href="index.php" class="btn btn-info offset-md-80">Retour</a>  
+            </form>
+        </div>
+    
+  
         <div class="row">
-
- 
- 
-        <form action="users.php" method="GET">
-<input id="search" name="search" type="text" placeholder="Recherche le Titre">
-<input id="submit" type="submit" value="Search">
-</form>
- 
- <div class="container">
-    <a href="mesLivresController.php"  class="btn1"> Emprunt</a>
-    <a href="cmesLivresController.php" class="btn2"> Rendre le Livres</a>
-    </div>
-
-                <?php if (isset($_GET['ordermeslivres'])) :?>
-               
+                <?php if (isset($_GET['ordermesemprunts'])) :?>     
                 <?php endif ;?>            
                 <br>
                 <table class="table table-striped">
                 <thead>
                     <tr>
-                        <th scope="col">#</th>
+                        <th scope="col">ID Ouvrage</th>
                         <th scope="col">Nom</th>
                         <th scope="col">Auteur</th>
-                        <th scope="col">Date de publication</th>
-                        <th scope="col">Genre</th>
-                        <th scope="col">Disponible</th>
-                        
+                        <th scope="col">Date Emprunter</th>
+                        <th scope="col">Date Fin d'Emprunter</th>          
                     </tr>
                 </thead>
                 <tbody>
@@ -47,17 +46,17 @@
                         <td><?= $book['idOuvrage'];?></td>
                         <td><?= $book['titreOuvrage'];?></td>
                         <td><?= $book['auteur'];?></td>
-                        <td><?= $book['anneeeditionOuvrage'];?></td>
-                        <td><?= $book['genre'];?></td>
-                        <td><?= $book['disponible'];?></td>
+                        <td><?= $book['datedebutEmprunter'];?></td>
+                        <td><?= $book['datefinEmprunter'];?></td>
+
                     </tr>
                     <?php endforeach;?>
                 </tbody>
                 </table>
-            </div>
-           
+            </div>  
             </div>
         </div>
+        <img src="docs/mezia.png">
     </main>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

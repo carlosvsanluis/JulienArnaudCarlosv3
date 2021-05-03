@@ -2,7 +2,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <title>Ma bibliothèque d'amour</title>
+    <title>MEZIA LIB</title>
   </head>
   <body>
     <main class="container">
@@ -21,12 +21,14 @@
                 <table class="table table-striped">
                 <thead>
                     <tr>
-                        <th scope="col">#</th>
+                        <th scope="col">ID Ouvrage</th>
                         <th scope="col">Nom</th>
                         <th scope="col">Auteur</th>
                         <th scope="col">Date de publication</th>
                         <th scope="col">Genre</th>
                         <th scope="col">Disponibilite</th>
+                        <th scope="col">Emplacement</th>
+
                     </tr>
                 </thead>
                 <tbody>
@@ -40,6 +42,7 @@
                         <td><?= $book['anneeeditionOuvrage'];?></td>
                         <td><?= $book['genre'];?></td>
                         <td><?= $book['disponible'];?></td>
+                        <td><?= $book['emplacement'];?></td>
                     </tr>
                     <?php endforeach;?>
                 </tbody>
