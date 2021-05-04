@@ -23,8 +23,7 @@ if (isset($_POST['usermail']) && isset($_POST['password']))
 
         $pdoConnexionSecured->execute();
         $result = $pdoConnexionSecured->fetch(PDO::FETCH_ASSOC);
-        print_r($result);
-        var_dump($result);
+      
 
         $_SESSION['owner'] = $result['idAdministre'];
         $_SESSION['dispo'] = $result['disponible'];

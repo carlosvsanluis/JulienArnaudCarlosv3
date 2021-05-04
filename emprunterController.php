@@ -14,33 +14,37 @@ require __DIR__."/inc/header.tpl.php";
 
 require __DIR__.'/view/emprunter.tpl.php'; 
 
+
+
+if (isset($_POST['idOuvrageEmprunt']) && isset($_POST['titreEmprunt'])){
+    
 $dbConnexion = new DB; 
 
 $pdo = $dbConnexion->getPdo();
 $owner = $_SESSION['owner']; 
+//var_dump($owner);
 
-
-if($_POST['idOuvrageEmprunt']!=="" && $_POST['titreEmprunt']!==""){
-
-    $pdoConnexionSecured3 = $pdo->prepare("SELECT * FROM ouvrages WHERE `idOuvrage`=:idOuvrageEmprunt and `idAdministre`=:$owner");
-    $pdoConnexionSecured3->bindValue(':idOuvrage', $_POST['idOuvrageEmprunt']);
-    $pdoConnexionSecured3->bindValue(':titreOuvrage', $_POST['titreEmprunt']);
-    $pdoConnexionSecured3->bindValue(':auteur', $_POST['auteurEmprunt']);
-
-    $pdoConnexionSecured3->execute();
-    
-    $pdoStatement = $pdo->query($sql);
-    
-    $bookList = $pdoStatement->fetchAll(PDO::FETCH_ASSOC);
-
-    $result = $pdoConnexionSecured3->fetch(PDO::FETCH_ASSOC);
+    if($_POST['idOuvrageEmprunt']!=="" && $_POST['titreEmprunt']!==""){
 
     
+    $pdoConnexionSecured = $pdo->prepare("SELECT * FROM ouvrages WHERE `idOuvrage`=:idOuvrageEmprunt and `idAdministre`=:$owner");
+    $pdoConnexionSecured->bindValue(':idOuvrage', $_POST['idOuvrageEmprunt']);
+    $pdoConnexionSecured->bindValue(':titreOuvrage', $_POST['titreEmprunt']);
+  
 
-        if ($result[':disponible'] == "OUI" ) {
+    $pdoConnexionSecured->execute();
+    $result = $pdoConnexionSecured->fetch(PDO::FETCH_ASSOC);
+    //$pdoStatement = $pdo->query($sql); 
+    //$bookList = $pdoStatement->fetchAll(PDO::FETCH_ASSOC);
+    $disponible =$result[':disponible'];
+
+    
+
+        if ($disponible == "OUI" ) {
 
             if ($_POST['idOuvrageEmprunt']== $book['idOuvrage']){
 
+                $owner = $_SESSION['owner']; 
                 $titre = $_POST['titreEmprunt'];
                 $auteur = $_POST['auteurEmprunt'];
                 $idOuvrage = $_POST['idOuvrageEmprunt'];
@@ -58,11 +62,13 @@ if($_POST['idOuvrageEmprunt']!=="" && $_POST['titreEmprunt']!==""){
         }
         else { echo "Erreur: Le Ouvrage ne sont pas disponible. Veuillez réessayer</h2>" ;
         }        
-
     }
+
+}  
  else { echo "" ;
-                
  }
- endif ;
- ?> 
-    
+ 
+ endif
+ ?>
+ <? require __DIR__."/inc/footer.tpl.php";?>
+ 

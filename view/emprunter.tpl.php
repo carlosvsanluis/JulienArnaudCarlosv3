@@ -1,4 +1,4 @@
-<body>
+
 
 
     <!-- Bootstrap CSS -->
@@ -7,6 +7,7 @@
     <title>Emprunter Une Livre</title>
   </head>
 
+  <body>
   <main class="container">
         <div class="jumbotron">
             <h1 class="display-4">Les Emprunts du <?=$_SESSION['name'];?> <?=$_SESSION['owner'];?> </h1>
@@ -14,15 +15,19 @@
         <div id="container">
         <form action="emprunterController.php" method="POST">
                 <h1>Emprunter</h1>
-                <label><strong>idOuvrage</strong></label>
-                <input type="text" class="form-control" name="idOuvrage" required>
+                <label><strong>ID Ouvrage</strong></label>
+                <input type="text" class="form-control" name="idOuvrageEmprunt" required>
                 <label><strong>Titre d'Ouvrage</strong></label>
-                <input type="text" class="form-control" name="titre" required>
+                <input type="text" class="form-control" name="titreEmprunt" required>
                 <label><strong>Auteur d'Ouvrage</strong></label>
-                <input type="text" class="form-control" name="auteur" required>
+                <input type="text" class="form-control" name="auteurEmprunt" required>
                 <input type="submit" value="Emprunt">
                 <a href="privatespace.php?page=bibliothèque" class="btn btn-info offset-md-80">Bibliothèque</a>  
             </form>
+            <div class="content-message">
+                <img src="docs/mezia.png"></div>
+                </div>
         </div>
+        <? require __DIR__."/inc/footer.tpl.php";?>
  </body>
-
+ 
