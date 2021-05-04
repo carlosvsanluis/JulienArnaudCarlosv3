@@ -22,21 +22,19 @@ $dbConnexion = new DB;
 
 $pdo = $dbConnexion->getPdo();
 $owner = $_SESSION['owner']; 
-//var_dump($owner);
 
-    if($_POST['idOuvrageEmprunt']!=="" && $_POST['titreEmprunt']!==""){
-
-    
-    $pdoConnexionSecured = $pdo->prepare("SELECT * FROM ouvrages WHERE `idOuvrage`=:idOuvrageEmprunt and `idAdministre`=:$owner");
-    $pdoConnexionSecured->bindValue(':idOuvrage', $_POST['idOuvrageEmprunt']);
-    $pdoConnexionSecured->bindValue(':titreOuvrage', $_POST['titreEmprunt']);
+    if($_POST['idOuvrageEmprunt']!=="" && $_POST['titreEmprunt']!==""){   
+    //var_dump($owner); 
+    $pdoConnexionSecured2 = $pdo->prepare("SELECT * FROM ouvrages WHERE `idOuvrage`=:idOuvrageEmprunt and `idAdministre`=:$owner");
+    $pdoConnexionSecured2->bindValue(':idOuvrage', $_POST['idOuvrageEmprunt']);
+    $pdoConnexionSecured2->bindValue(':titreOuvrage', $_POST['titreEmprunt']);
   
 
-    $pdoConnexionSecured->execute();
-    $result = $pdoConnexionSecured->fetch(PDO::FETCH_ASSOC);
+    $pdoConnexionSecured2->execute();
+    $result = $pdoConnexionSecured2->fetch(PDO::FETCH_ASSOC);
     //$pdoStatement = $pdo->query($sql); 
     //$bookList = $pdoStatement->fetchAll(PDO::FETCH_ASSOC);
-    $disponible =$result[':disponible'];
+    $disponible = $result[':disponible'];
 
     
 
