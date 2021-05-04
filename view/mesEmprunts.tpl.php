@@ -8,7 +8,7 @@
   <body>
     <main class="container">
         <div class="jumbotron">
-            <h1 class="display-4">Les LIVRES du <?=$_SESSION['name'];?> <?=$_SESSION['owner'];?> </h1>
+            <h1 class="display-4">Les Emprunts du <?=$_SESSION['name'];?> <?=$_SESSION['owner'];?> </h1>
         </div>
         <div class="row">
 
