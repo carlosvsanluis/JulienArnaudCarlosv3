@@ -43,6 +43,7 @@
                         <td><?= $book['genre'];?></td>
                         <td><?= $book['disponible'];?></td>
                         <td><?= $book['emplacement'];?></td>
+                        <td><a href="emprunterController.php" class="btn btn-primary">Emprunter</a>&nbsp;</td>
                     </tr>
                     <?php endforeach;?>
                 </tbody>
@@ -51,6 +52,9 @@
            
             </div>
         </div>
+                <div class="content-message">
+                <img src="docs/mezia.png"></div>
+                </div>
     </main>
 
     <!-- Optional JavaScript -->

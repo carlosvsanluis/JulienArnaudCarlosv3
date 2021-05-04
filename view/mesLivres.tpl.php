@@ -49,9 +49,11 @@
                 </tbody>
                 </table>
             </div>
-           
             </div>
-        </div>
+                <div class="content-message">
+                <img src="docs/mezia.png"></div>
+                </div>
+        </div>  
     </main>
 
     <!-- Optional JavaScript -->

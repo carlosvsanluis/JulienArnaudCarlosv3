@@ -119,7 +119,9 @@
           RÉSOLUTION DE CONFLITS. LOI APPLICABLE ET JURIDICTION
 
           Les présentes Conditions générales d’utilisation seront régies par la législation espagnole et, en particulier, par la législation en matière de protection des données à caractère personnel (Loi organique 15/1999 du 13 décembre relative à la protection des données à caractère personnel et Règlement général sur la protection des données de la CE) et par la législation en matière de services de la société de l’information (Loi 34/2002 du 11 juillet relative aux services de la société de l’information et au commerce électronique). Tout litige sera résolu devant les tribunaux de Barcelone.
-
+          <div class="content-message">
+                <img src="docs/mezia.png"></div>
+                </div>
 
 
 </body>

@@ -35,5 +35,8 @@
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque scelerisque suscipit nibh quis
             porttitor. Integer iaculis mi urna, a pulvinar quam adipiscing ut. Vivamus vel vestibulum mauris.<br>
           </p>
+          <div class="content-message">
+          <img src="docs/mezia.png"></div>
+        </div>
   </div>   
 </body>
