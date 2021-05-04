@@ -21,7 +21,7 @@
                 <label><strong>Auteur d'Ouvrage</strong></label>
                 <input type="text" class="form-control" name="auteur" required>
                 <input type="submit" value="Emprunt">
-                <a href="index.php" class="btn btn-info offset-md-80">Retour</a>  
+                <a href="privatespace.php?page=bibliothèque" class="btn btn-info offset-md-80">Bibliothèque</a>  
             </form>
         </div>
  </body>
