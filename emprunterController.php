@@ -28,13 +28,13 @@ $owner = $_SESSION['owner'];
 //var_dump(+$owner);
 //var_dump($owner);
 ////var_dump($_POST['idOuvrageEmprunt']);
-var_dump($_POST['titreEmprunt']);
+//var_dump($_POST['titreEmprunt']);
 
     if($_POST['idOuvrageEmprunt']!=="" && $_POST['titreEmprunt']!==""){
 
    
 
-    $pdoConnexionSecured = $pdo->prepare("SELECT * FROM ouvrages WHERE idOuvrage=:idOuvrageEmprunt and idAdministre=:owner"); // variables here must match your bindValue parameters.
+    $pdoConnexionSecured = $pdo->prepare("SELECT * FROM ouvrages WHERE idOuvrage=:idOuvrageEmprunt and idAdministre=:owner"); 
     $pdoConnexionSecured->bindValue(':idOuvrageEmprunt', +$_POST['idOuvrageEmprunt']); //Added + to make your param an INT since idOuvrage is expecting and int, not a string. 
     $pdoConnexionSecured->bindValue(':owner', +$owner);
 

@@ -46,7 +46,3 @@ require __DIR__."/inc/footer.tpl.php";
 ?>
 <?php endif; ?> 
 
-
-
-
-a
