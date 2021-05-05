@@ -28,6 +28,6 @@
                 <img src="docs/mezia.png"></div>
                 </div>
         </div>
-        <? require __DIR__."/inc/footer.tpl.php";?>
+        
  </body>
  

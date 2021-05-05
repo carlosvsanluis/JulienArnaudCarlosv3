@@ -40,7 +40,7 @@ require __DIR__."/inc/header.tpl.php";
 
 // Inclusion du fichier s'occupant d'afficher le code HTML
 require __DIR__."/view/mesLivres.tpl.php";
-
+require __DIR__."emprunterController.php";
 require __DIR__."/inc/footer.tpl.php";
 
 ?>

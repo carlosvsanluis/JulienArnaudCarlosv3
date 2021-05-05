@@ -1,5 +1,6 @@
 
 <?php 
+
 //Start session from login controller, privatesspace.php
 
 session_start();
@@ -23,31 +24,42 @@ $dbConnexion = new DB;
 $pdo = $dbConnexion->getPdo();
 $owner = $_SESSION['owner']; 
 
-    if($_POST['idOuvrageEmprunt']!=="" && $_POST['titreEmprunt']!==""){   
-    //var_dump($owner); 
-    $pdoConnexionSecured2 = $pdo->prepare("SELECT * FROM ouvrages WHERE `idOuvrage`=:idOuvrageEmprunt and `idAdministre`=:$owner");
-    $pdoConnexionSecured2->bindValue(':idOuvrage', $_POST['idOuvrageEmprunt']);
-    $pdoConnexionSecured2->bindValue(':titreOuvrage', $_POST['titreEmprunt']);
-  
 
-    $pdoConnexionSecured2->execute();
-    $result = $pdoConnexionSecured2->fetch(PDO::FETCH_ASSOC);
-    //$pdoStatement = $pdo->query($sql); 
-    //$bookList = $pdoStatement->fetchAll(PDO::FETCH_ASSOC);
-    $disponible = $result[':disponible'];
+//var_dump(+$owner);
+//var_dump($owner);
+////var_dump($_POST['idOuvrageEmprunt']);
+var_dump($_POST['titreEmprunt']);
 
+    if($_POST['idOuvrageEmprunt']!=="" && $_POST['titreEmprunt']!==""){
+
+   
+
+    $pdoConnexionSecured = $pdo->prepare("SELECT * FROM ouvrages WHERE idOuvrage=:idOuvrageEmprunt and idAdministre=:owner"); // variables here must match your bindValue parameters.
+    $pdoConnexionSecured->bindValue(':idOuvrageEmprunt', +$_POST['idOuvrageEmprunt']); //Added + to make your param an INT since idOuvrage is expecting and int, not a string. 
+    $pdoConnexionSecured->bindValue(':owner', +$owner);
+
+
+    $pdoConnexionSecured->execute();
     
+    //$pdoStatement = $pdo->query($sql);
+    
+    //$bookList = $pdoStatement->fetchAll(PDO::FETCH_ASSOC); 
 
-        if ($disponible == "OUI" ) {
+    $result = $pdoConnexionSecured->fetch(PDO::FETCH_ASSOC);
 
-            if ($_POST['idOuvrageEmprunt']== $book['idOuvrage']){
+    echo "<br>";
+   
+
+        if ($result['disponible'] == "OUI" ) { 
+
+            if ($_POST['idOuvrageEmprunt']== $result['idOuvrage']){ 
 
                 $owner = $_SESSION['owner']; 
                 $titre = $_POST['titreEmprunt'];
                 $auteur = $_POST['auteurEmprunt'];
                 $idOuvrage = $_POST['idOuvrageEmprunt'];
             
-                $insertQuery = "INSERT into `emprunter` (idAdministre, idOuvrages, titreOuvrage, 
+                $insertQuery = "INSERT into `emprunter` (idAdministre, idOuvrage, titreOuvrage, 
                 auteur)
                 VALUES ({$owner}, '{$idOuvrage}', '{$titre}', '{$auteur}');
                 ";
