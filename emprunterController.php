@@ -47,10 +47,13 @@ $owner = $_SESSION['owner'];
 
     $result = $pdoConnexionSecured->fetch(PDO::FETCH_ASSOC);
 
+    //var_dump($result['disponible']);
     echo "<br>";
    
 
-        if ($result['disponible'] == "OUI" ) { 
+
+        if ($result['disponible'] == "OUI" )
+        { 
 
             if ($_POST['idOuvrageEmprunt']== $result['idOuvrage']){ 
 

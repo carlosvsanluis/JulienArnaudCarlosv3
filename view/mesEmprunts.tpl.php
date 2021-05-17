@@ -36,6 +36,8 @@
                         <td><?= $book['auteur'];?></td>
                         <td><?= $book['datedebutEmprunter'];?></td>
                         <td><?= $book['datefinEmprunter'];?></td>
+                        <td><a href="emprunterController.php" class="btn btn-primary">Rendre cette Livre</a>&nbsp;</td>
+
 
                     </tr>
                     <?php endforeach;?>
