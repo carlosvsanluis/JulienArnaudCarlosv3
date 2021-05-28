@@ -19,7 +19,7 @@ $dbConnexion = new DB;
 $pdo = $dbConnexion->getPdo();
 $sql = 'SELECT *, `prenomAdministre`,`nomAdministre` 
 FROM `ouvrages` 
-INNER JOIN `administres` ON `ouvrages`.`idAdministre`=`administres`.`prenomAdministre`
+INNER JOIN `administres` ON `ouvrages`.`idAdministre`=`administres`.`idAdministre`
 ';
 //SELECT Orders.OrderID, Customers.CustomerName, Orders.OrderDate
 //FROM Orders
@@ -60,6 +60,7 @@ if (!empty($_GET['order'])) {
 
 
 $pdoStatement = $pdo->query($sql);
+
 $bookList = $pdoStatement->fetchAll(PDO::FETCH_ASSOC);
 
 require __DIR__."/inc/header.tpl.php";

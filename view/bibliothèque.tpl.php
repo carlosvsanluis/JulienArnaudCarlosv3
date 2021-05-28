@@ -44,7 +44,7 @@
                         <td><?= $book['anneeeditionOuvrage'];?></td>
                         <td><?= $book['genre'];?></td>
                         <td><?= $book['disponible'];?></td>
-                        <td><?= $book['auteur'];?> <?= $book['genre'];?></td>
+                        <td><?= $book['prenomAdministre'];?> <?= $book['nomAdministre'];?></td>
                     <?php endforeach;?>
                 </tbody>
                 </table>
