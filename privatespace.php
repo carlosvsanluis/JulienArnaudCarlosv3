@@ -17,9 +17,16 @@ require __DIR__.'/inc/db.php'; // Pour __DIR__ => http://php.net/manual/fr/langu
 //          car elle a été créée par le fichier inclus ci-dessus
 $dbConnexion = new DB; 
 $pdo = $dbConnexion->getPdo();
-$sql = 'SELECT * FROM `ouvrages` 
+$sql = 'SELECT *, `prenomAdministre`,`nomAdministre` 
+FROM `ouvrages` 
+INNER JOIN `administres` ON `ouvrages`.`idAdministre`=`administres`.`prenomAdministre`
 ';
+//SELECT Orders.OrderID, Customers.CustomerName, Orders.OrderDate
+//FROM Orders
+//INNER JOIN Customers ON Orders.CustomerID=Customers.CustomerID;
 // Si un tri a été demandé, on réécrit la requête
+
+
 if (!empty($_GET['order'])) {
     // Récupération du tri choisi
     $order = trim($_GET['order']);
@@ -35,6 +42,19 @@ if (!empty($_GET['order'])) {
         ORDER BY `auteur` ASC 
         ';
     }
+    else if ($order == 'date') {
+        // TODO #2 écrire la requête avec un tri par autheur croissant
+        $sql = 'SELECT * from `ouvrages`
+        ORDER BY `anneeeditionOuvrage` DESC 
+        ';
+    }
+    else if ($order == 'genre') {
+        // TODO #2 écrire la requête avec un tri par autheur croissant
+        $sql = 'SELECT * from `ouvrages`
+        ORDER BY `genre` ASC 
+        ';
+    }
+
 }
 
 

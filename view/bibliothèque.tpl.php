@@ -13,6 +13,9 @@
             
                 <a href="privatespace.php?order=titre&amp;page=bibliothèque" class="btn btn-primary">Trier par nom</a>&nbsp;
                 <a href="privatespace.php?order=auteur&amp;page=bibliothèque" class="btn btn-info">Trier par auteur</a>&nbsp;
+                <a href="privatespace.php?order=date&amp;page=bibliothèque" class="btn btn-info">Trier par date de publication</a>&nbsp;
+                <a href="privatespace.php?order=genre&amp;page=bibliothèque" class="btn btn-info">Trier par genre</a>&nbsp;
+
                 <!-- TODO #2 n'afficher ce bouton que s'il y a un tri -->
                 <?php if (isset($_GET['order'])) :?>
                 <a href="privatespace.php?&amp;page=bibliothèque" class="btn btn-dark">Annuler le tri</a><br> 
@@ -27,6 +30,7 @@
                         <th scope="col">Date de publication</th>
                         <th scope="col">Genre</th>
                         <th scope="col">Disponibilite</th>
+                        <th scope="col">Propriétaire</th>   
                     </tr>
                 </thead>
                 <tbody>
@@ -40,7 +44,7 @@
                         <td><?= $book['anneeeditionOuvrage'];?></td>
                         <td><?= $book['genre'];?></td>
                         <td><?= $book['disponible'];?></td>
-                    </tr>
+                        <td><?= $book['auteur'];?> <?= $book['genre'];?></td>
                     <?php endforeach;?>
                 </tbody>
                 </table>

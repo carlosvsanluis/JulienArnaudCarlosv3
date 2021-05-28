@@ -27,7 +27,12 @@ if (isset($_POST['usermail']) && isset($_POST['password']))
         var_dump($result);
 
         $_SESSION['owner'] = $result['idAdministre'];
-        $_SESSION['dispo'] = $result['disponible'];
+        $_SESSION['lastname'] = $result['nomAdministre'];
+        $_SESSION['telephone'] = $result['telephoneAdministre'];
+        $_SESSION['email'] = $result['emailAdministre'];
+        $_SESSION['adress'] = $result['adresseAdministre'];
+        
+
 
         if ($result != 0) {
             $_SESSION['name'] = $result['prenomAdministre'];

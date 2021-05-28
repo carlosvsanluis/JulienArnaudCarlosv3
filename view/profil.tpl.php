@@ -26,10 +26,20 @@
         <div class="content-message">
             <h1>Bonjour <?=$_SESSION['name'];?></h1>
             <p> bienvenue, vous êtes connecté </p>
+
+
+            <h1>Mes Infos</h1>
+            <h4>Nom: <?=$_SESSION['lastname'];?></h4>
+            <h4>PreNom: <?=$_SESSION['name'];?></h4>
+            <h4>Telephone: <?=$_SESSION['telephone'];?></h4>
+            <h4>Email: <?=$_SESSION['email'];?></h4>
+            <h4>Adresse: <?=$_SESSION['adress'];?></h4>
+
+            <a href="mesinfos.php" class="btn btn-primary">update info</a>
+
         </div>
         <img src="docs/Mezia_LIb.png">
         <a href="deconnexionController.php" class="btn btn-dark offset-md-4 mt-3"> Se déconnecter </a>
-
       </div>
   </body>
 </html>

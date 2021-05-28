@@ -10,3 +10,11 @@ if $currentpage = 'mesLivres' {
 
 
 }
+
+$query = "SELECT `tbl_investors`.* , `tbl_investors_ledger`.*  
+ FROM `tbl_investors` 
+ LEFT JOIN  `tbl_investors_ledger` 
+ ON `tbl_investors`.id = `tbl_investors_ledger`. investor_id 
+ WHERE `tbl_investors`.deleted = 0 AND `tbl_investors_ledger`.deleted = 0 
+ GROUP BY `tbl_investors_ledger`.investor_id 
+ ORDER BY `tbl_investors_ledger`.id DESC ";
